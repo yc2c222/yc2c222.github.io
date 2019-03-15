@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设备状态</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="js/jquery.main.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <style>html,body,.container-fluid,.row,.col-sm-12{height: 100%;
+        width: 100%;} </style>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="javascript/DeviceInfo.js"></script>
+    <style>
+        .display-4{
+            font-weight: 400;
+            font-style: italic;
+            background-color: #303030;
+            color: darkslateblue;
+            padding-bottom: 0.2%;
+        }
+        .table{
+            margin-top: 3%;
+            margin-left: 1%;
+        }
+        #back{
+            position: absolute;
+            bottom: 15%;
+            right: 1%;
+        }
+        #back:hover{
+            background-color: darkslateblue;
+            font-weight: bold;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="display-4">Device Info</h1>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>DeviceName</th>
+                    <th>LocalDeviceIpList</th>
+                    <th>LocalWanList</th>
+                    <th>LocalLegalIp</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                <!-- table item example
+                <tr>
+                    <td>Device x</td>
+                    <td>12.12.12.1</td>
+                    <td>WAN 1</td>
+                    <td>12.12.12.10</td>
+                </tr>
+                -->
+                </tbody>
+            </table>
+            <button class="btn btn-dark" id="back"><i class="fa fa-arrow-circle-left"></i> Back</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

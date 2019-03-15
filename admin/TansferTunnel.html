@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隧道转移</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <style>html,body,.container-fluid,.row,.col-sm-12{height: 100%;
+        width: 100%;} </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="display-4" style="font-weight: bold;font-style: italic;background-color: #303030;color: lightblue;">隧道转移</h1>
+            <form style="background-color: floralwhite;width: 95%;height: 45%; margin-left: 2.5%;margin-top: 2%">
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%">
+                    <label for="VTEPsrcIP">VTEPsrcIP</label>
+                    <select class="form-control" id="VTEPsrcIP">
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%;">
+                    <label for="VTEPSrcPort">VTEPSrcPort</label>
+                    <select class="form-control" id="VTEPSrcPort">
+                        <option>1</option>
+                    </select>
+                </div><br>
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%;">
+                    <label for="VTEPDestIP">VTEPDestIP</label>
+                    <select class="form-control" id="VTEPDestIP">
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%;">
+                    <label for="VTEPDestPort">VTEPDestPort</label>
+                    <select class="form-control" id="VTEPDestPort">
+                        <option>1</option>
+                    </select>
+                </div><br>
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%;">
+                    <label for="SrcDeviceWAN">SrcDeviceWAN</label>
+                    <select class="form-control" id="SrcDeviceWAN">
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: inline-block;width: 20%;margin-left: 15%;">
+                    <label for="DestDeviceWAN">DestDeviceWAN</label>
+                    <select class="form-control" id="DestDeviceWAN">
+                        <option>1</option>
+                    </select>
+                </div><br>
+                <button class="btn btn-outline-primary" style="display: inline-block;width: 10%;margin-left: 15%;">配置</button>
+            </form>
+            <button class="btn btn-outline-warning" style="margin-top: 1%;margin-left: 94.5%;"><a href="Managetunnle.html">Back</a></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

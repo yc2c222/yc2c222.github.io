@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隧道管理</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <style>html,body,.container-fluid,.row,.col-sm-12{height: 100%;
+        width: 100%;} </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="display-4" style="font-weight: bold;font-style: italic;background-color: #303030;color: lightblue;">隧道管理</h1>
+            <table class="table table-striped" id="" style="margin-top: 3%;margin-left: 1%;">
+                <thead>
+                <tr>
+                    <th>VNI</th>
+                    <th>VTEPsrcIP</th>
+                    <th>VTEPDestIP</th>
+                    <th>VTEPSrcPort</th>
+                    <th>VTEPDestPort</th>
+                    <th>Src/Dest Device </th>
+                    <th>Encrypt Level</th>
+                    <th>Delay</th>
+                    <th>BandWidth</th>
+                </tr>
+                </thead>
+                <tbody style="margin-top: 2%;">
+                <tr>
+                    <td>0001</td>
+                    <td>1.1.1.1</td>
+                    <td>2.2.2.2</td>
+                    <td>21</td>
+                    <td>32</td>
+                    <td>device1/device2</td>
+                    <td>/</td>
+                    <td>100 ms</td>
+                    <td>50M bps</td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-outline-danger" style="margin-top: 5%;margin-left: 65%;">业务绑定</button>
+            <button class="btn btn-outline-danger" style="margin-top: 5%;margin-left: 5%;">隧道转移</button>
+            <button class="btn btn-outline-danger" style="margin-top: 5%;margin-left: 5%;">隧道拆除</button>
+            <button class="btn btn-outline-warning" style="margin-top: 5%;margin-left: 5%;"><a href="View.html">Back</a></button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

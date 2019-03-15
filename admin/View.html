@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VXLAN Control</title>
+	<meta charset="utf-8">
+	<!-- 为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，需要在网页的 head 之中添加 viewport meta 标签 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- 新 Bootstrap4 核心 CSS 文件 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--jQuery-->
+	<script src="js/jquery.main.js"></script>
+	<script src="js/jquery.params.js"></script>
+  	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+	<!-- 引入toastr的css和js文件 -->
+	<link href="js/toastr.min.css" rel="stylesheet" />
+	<script src="js/toastr.min.js"></script>
+	<script type="text/javascript">toastr.options.positionClass = 'toast-top-right';</script>
+	<!--Canvas JTopo-->
+	<script src="js/jtopo-0.4.8-min.js"></script>
+	<!--fontawesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!--用于提示框的插件-->
+	<link rel="stylesheet" href="js/jquery-confirm.min.css" media="screen">
+	<script src="js/jquery-confirm.min.js"></script>
+	<!--html的javascript文件-->
+	<script src="javascript/view-script.js"></script>
+	<style>
+		html,body,.container-fluid,.row,.col-sm-2,.col-sm-10{height: 97%;}
+		body{overflow: auto}
+		h1{font-style: italic;color: darkslateblue;background-color: #303030;padding-bottom: 0.2%;}
+		.col-sm-2{
+			background-color: white;
+
+			height: 100%;
+		}
+		#RefreshDevInfo:hover{
+			color: royalblue;
+			cursor: pointer;
+		}
+		h2{margin-top: 2%;}
+		.table{table-layout: fixed;margin-top: 1%;overflow: auto}
+		.bg{width: 100%}
+		.dpt{
+			background-color: #111111;
+			width: 60%;
+			margin-left: 10%;
+			color: ghostwhite;
+			margin-bottom: 5%;
+		}
+		.dpt:hover{
+			background-color: royalblue;
+			font-weight: bold;
+		}
+		.dpm{margin-top: -8%;margin-left:38%;padding: 0;}
+		.dpi{}
+		.dpi:hover{background-color: darkslateblue}
+
+		.dpt2{
+			padding: 0%;
+			background-color: #c2ccd1;
+			margin: 0;
+		}
+		.dpt2:hover{
+			background-color: #2b81af;
+			font-weight: bold;
+		}
+		.dpm2{padding: 0;}
+		.dpi2:hover{
+			background-color: gold;
+		}
+
+		.col-sm-10{
+			background-color: white;
+		}
+		#topology{
+			height: 70%;
+			width: 100%;
+			position: relative;
+			border: darkslateblue solid 5px;
+			background-color: white;
+
+		}
+		#showTableBtn{
+			position: absolute;
+			bottom: 2%;
+			right: 1%;
+		}
+		#tableHide:hover{background-color: gold;font-weight: bold;border-color: white;}
+		#canvas{
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<h1 class="display-5" style="font-weight: 400"><i class="fas fa-server" style="margin-left: 0.5%"></i>  VXLAN Control System</h1>
+	<!-- 布局：第一行 -->
+	<div class="row">
+		<!-- 布局：第一列 -->
+		<div class="col-sm-2">
+			<h2 class="display-5" id="RefreshDevInfo">Device</h2>
+			<div class="list-group" id="deviceinfo">
+				<!-- button example
+				<div class="btn-group">
+					<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" style="" >Device 4</button>
+					<div class="dropdown-menu">
+						<a href="DeviceInfo.html" class="dropdown-item">设备信息</a>
+						<a href="Configtunnel.html" class="dropdown-item">配置隧道</a>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>
+		<!-- 布局：第二列 -->
+		<div class="col-sm-10">
+			<div id="topology" >
+				<img src="structure.jpg" id="image" style="padding-left: 16%;">
+				<canvas id="canvas" width="0" height="0"></canvas>
+				<!-- 奖一个元素固定在某个位置：父元素设置为relative 子元素设置为obsolut 然后用left right top bottom 控制位置 -->
+				<div id="showTableBtn">
+					<button class="btn btn-dark" id="tableHide"><i class="fas fa-toggle-on fa-1x"></i> Table ON</button>
+				</div>
+			</div>
+			<table class="table table-dark table-hover" id="table">
+				<thead>
+				<tr>
+					<th>VNI</th>
+					<th>VTEPSrcIP</th>
+					<th>VTEPDestIP</th>
+					<th>VTEPSrcPort</th>
+					<th>VTEPDestPort</th>
+					<th>SrcDeviceWAN</th>
+					<th>DestDeviceWAN</th>
+				</tr>
+				</thead>
+				<tbody>
+				<!--<tr class='tableitem'>
+                    <td>0001</td>
+                    <td>1.1.1.1</td>
+                    <td>2.2.2.2</td>
+                    <td>eth1</td>
+                    <td>eth2</td>
+                    <td>high</td>
+                    <td>device1/device2</td>
+                </tr> -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

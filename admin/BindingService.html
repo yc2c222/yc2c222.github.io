@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>业务绑定</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <!--jQuery-->
+    <script src="js/jquery.main.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- 引入toastr的css和js文件 用于事件提示框 -->
+    <link href="js/toastr.min.css" rel="stylesheet" />
+    <script src="js/toastr.min.js"></script>
+    <script type="text/javascript">toastr.options.positionClass = 'toast-top-center';</script>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="javascript/BindingService.js"></script>
+    <style>
+        html,body,.container-fluid,.row,.col-sm-12{height: 100%;
+        width: 100%;}
+        .display-4{
+            font-weight: 400;
+            font-style: italic;
+            background-color: #303030;
+            color: darkslateblue;
+            padding-bottom: 0.2%;
+        }
+        form{
+            background-color: #ececec;
+            width: 90%;
+            height: 30%;
+            margin-left: 5%;
+            margin-top: 2%
+        }
+        .form-group{
+            display: inline-block;
+            width: 20%;
+            margin-left: 15%;
+        }
+        #table{
+            width: 90%;
+            margin-left: 5%;
+        }
+        #formBtn{
+            display: inline-block;
+            width: 10%;
+            margin-left: 15%;
+        }
+        #formBtn:hover{
+            background-color: gold;
+            font-weight: bold;
+            border-color: white;
+        }
+        #back{
+            position: absolute;
+            bottom: 15%;
+            right: 1%;
+        }
+        #back:hover{
+            background-color: darkslateblue;
+            font-weight: bold;
+            border-color: white;
+        }
+        .dpt3{
+            padding: 0%;
+            background-color: #c2ccd1;
+            margin: 0;
+        }
+        .dpt3:hover{
+            background-color: #2b81af;
+            font-weight: bold;
+        }
+        .dpm3{padding: 0;}
+        .dpi3:hover{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="display-4">Service Binding</h1>
+            <form id="Serviceform">
+                <div class="form-group" id="srcipDiv">
+                    <label for="DataSrcIP">DataSrcIP</label>
+                    <select class="form-control" id="DataSrcIP" name="DataSrcIP">
+
+                    </select>
+                </div>
+                <div class="form-group" id="destipDiv">
+                    <label for="DataDestIP">DataDestIP</label>
+                    <select class="form-control" id="DataDestIP" name="DataDestIP">
+
+                    </select>
+                </div>
+                <div class="form-group" >
+                    <label for="EncryptLevel">Encrypt Level</label>
+                    <select class="form-control" id="EncryptLevel" name="EncryptLevel">
+                        <option>High</option>
+                        <option>Middle</option>
+                        <option>Low</option>
+                        <option>None</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: none">
+                    <input type="text" class="form-control" id="vni" name="Vni" value="0">
+                </div>
+                <button type="button" class="btn btn-dark" id="formBtn">Confirm</button>
+            </form>
+            <button class="btn btn-dark" id="back"><i class="fa fa-arrow-circle-left"></i> Back</button>
+            <table class="table table-dark table-hover" id="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Data Source IP</th>
+                    <th>Data Dest IP</th>
+                    <th>Flow InPort</th>
+                    <th>Flow OutPort</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-confirm.min.css" media="screen">
+    <script src="js/jquery-confirm.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           $("#btn_delete").on('click',function () {
+               $.confirm({
+                   typeAnimated: true,
+                   animateFromElement: false,
+                   animation: 'RotateX',
+                   closeAnimation: 'scale'
+               });
+// Available animations:
+// right, left, bottom, top, rotate, none, opacity, scale, zoom,
+// scaleY, scaleX, rotateY, rotateYR (reverse), rotateX, rotateXR (reverse)
+           });
+        });
+    </script>
+</head>
+<body>
+<button class="btn btn-dark" id="btn_delete" style="margin-top: 20%;margin-left: 40%">Table ON</button>
+<i class="fas fa-atom fa-spin" style="font-size: 3em"></i>
+<i class="fal fa-atom fa-spin" style="font-size: 3em"></i>
+</body>
+</html>
