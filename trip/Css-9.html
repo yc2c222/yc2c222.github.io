@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>全图滚动</title>
+		<link rel="stylesheet" href="Css9-Style.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<!--导航-->
+			<nav class="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+			</nav>
+			<!--内容-->
+			<section id="home">
+				<h1>Welcome ALL You to here</h1>
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum facilis, labore nulla obcaecati
+					officiis quam quidem repudiandae sit totam.
+				</p>
+			</section>
+			<section id="service">
+				<h1>Welcome ALL You to here</h1>
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum facilis, labore nulla obcaecati
+					officiis quam quidem repudiandae sit totam.
+				</p>
+			</section>
+			<section id="about">
+				<h1>Welcome ALL You to here</h1>
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum facilis, labore nulla obcaecati
+					officiis quam quidem repudiandae sit totam.
+				</p>
+			</section>
+			<section id="contact">
+				<h1>Welcome ALL You to here</h1>
+				<p class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum facilis, labore nulla obcaecati
+					officiis quam quidem repudiandae sit totam.
+				</p>
+			</section>
+		</div>
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+          $(".navbar a").on("click",function (e) {
+              //console.log(this.hash);
+	           if (this.hash !== '') {
+	               e.preventDefault();
+	               const hash = this.hash;
+
+	               $('html,body').animate({
+		                scrollTop:$(hash).offset().top
+	               },800);
+	           }
+
+          });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+/*全局样式初始化*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:  Arial;
+    background: #333333;
+    color: #ffffff;
+    /*整个页面被等分为100分，最大值为100vh*/
+    height: 100vh;
+    line-height: 1.6;
+    /*超过当前页面的不显示*/
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    /*可以在垂直方向滚动*/
+    /*overflow-y: scroll;*/
+    /*scroll-behavior: smooth;*/
+    /*scroll-snap-type: y mandatory;*/
+}
+
+/*使用Css实现全图滚动*/
+
+
+.navbar{
+    /*使导航栏的位置固定，不以滚动条变化而变化*/
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 7vh;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul{
+    /*使原本为垂直的navbar变为水平*/
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li{
+    /*是指相对于根元素的字体大小的单位*/
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover{
+    color: skyblue;
+}
+
+section{
+    /*使用flex是为了时它位于屏幕居中，但section里的元素将会位于同一行，可以使用flex-direction消除*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /*让每一个section占据一个完整的页面*/
+    width: 100%;
+    height: 100vh;
+
+    /*只展示一个页面，不停留在两个页面的中间，哪个页面占的多则显示哪个*/
+    /*scroll-snap-align: center;*/
+}
+
+section h1{
+    font-size: 4rem;
+}
+
+section p{
+    font-size: 1.5rem;
+}
+
+/*image*/
+section#home{
+    background: url("./image/10.jpg") no-repeat center center/cover;
+}
+section#service{
+
+    background: url("./image/5.jpg") no-repeat center center/cover;
+    color: rgba(0,0,0,0.6);
+}
+section#about{
+    background: url("./image/7.jpg") no-repeat center center/cover;
+}
+section#contact{
+    background: url("./image/6.jpg") no-repeat center center/cover;
+    color: rgba(0,0,0,0.6);
+}
