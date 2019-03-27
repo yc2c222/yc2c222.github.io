@@ -1,0 +1,42 @@
+{
+  "ret": true,
+  "data": {
+    "city": "ChenDu",
+    "swiperList": [
+      {"id":"001","imgUrl":"@/../static/img/5.jpg"},
+      {"id":"002","imgUrl":"@/../static/img/11.jpg"},
+      {"id":"003","imgUrl":"@/../static/img/6.jpg"},
+      {"id":"004","imgUrl":"@/../static/img/4.jpg"}
+    ],
+    "iconList": [
+      {"id":"001","class":"fa  fa-github-alt fa-4x icon-img-content","desc":"iconText"},
+      {"id":"002","class":"fa  fa-yc-square fa-4x icon-img-content","desc":"iconText"},
+      {"id":"003","class":"fa  fa-github-alt fa-4x icon-img-content","desc":"iconText"},
+      {"id":"004","class":"fa  fa-yc-square fa-4x icon-img-content","desc":"iconText"},
+      {"id":"005","class":"fa  fa-github-alt fa-4x icon-img-content","desc":"iconText"},
+      {"id":"006","class":"fa  fa-yc-square fa-4x icon-img-content","desc":"iconText"},
+      {"id":"007","class":"fa  fa-github-alt fa-4x icon-img-content","desc":"iconText"},
+      {"id":"008","class":"fa  fa-yc-square fa-4x icon-img-content","desc":"iconText"},
+      {"id":"009","class":"fa  fa-gratipay fa-4x icon-img-content","desc":"iconText"},
+      {"id":"010","class":"fa  fa-gratipay fa-4x icon-img-content","desc":"iconText"},
+      {"id":"011","class":"fa  fa-gratipay fa-4x icon-img-content","desc":"iconText"},
+      {"id":"012","class":"fa  fa-gratipay fa-4x icon-img-content","desc":"iconText"}
+    ],
+    "recommendList": [
+      {"id":"001","imgUrl":"@/../static/img/recommend-6.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"002","imgUrl":"@/../static/img/recommend-9.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"003","imgUrl":"@/../static/img/recommend-14.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"004","imgUrl":"@/../static/img/recommend-12.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"005","imgUrl":"@/../static/img/recommend-10.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."}
+    ],
+    "vacationList": [
+      {"id":"001","imgUrl":"@/../static/img/recommend-5.jpg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"002","imgUrl":"@/../static/img/recommend-3.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"003","imgUrl":"@/../static/img/recommend-4.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"004","imgUrl":"@/../static/img/recommend-8.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"005","imgUrl":"@/../static/img/recommend-7.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"006","imgUrl":"@/../static/img/recommend-11.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."},
+      {"id":"007","imgUrl":"@/../static/img/recommend-13.jpeg","title":"Lorem","desc":"Lorem ipsum dolor sit amet,consectetur adipisicing elit.Dolore,eum."}
+    ]
+  }
+}
