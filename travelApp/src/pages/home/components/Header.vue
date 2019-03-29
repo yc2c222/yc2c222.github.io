@@ -8,10 +8,12 @@
       <span class="iconfont">&#xe632;</span>
       input city or sight
     </div>
-    <div class="header-right">
-      {{city}}
-      <span class="iconfont arrow-icon">&#xe62d;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <span class="iconfont arrow-icon">&#xe62d;</span>
+      </div>
+    </router-link>
 	</div>
 </template>
 
@@ -34,7 +36,7 @@
   @import "~styles/varibles.styl"
   .header
     display:flex
-    line-height:0.86rem
+    line-height: $headerHeight
     background: $bgColor
     color: #f4f4f4
     .header-left
@@ -57,6 +59,7 @@
       width 1.8rem
       float right
       text-align center
+      color: white
       .arrow-icon
         font-size .3rem
 

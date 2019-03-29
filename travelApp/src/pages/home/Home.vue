@@ -37,7 +37,7 @@ axios 返回的是一个promise对象-->
       },
       methods:{
           getHomeInfo (){
-            axios.get('@/../static/mock/index.json')
+            axios.get('/api/index.json')
               .then(this.getHomeInfoSucc)
           },
         getHomeInfoSucc (res){
@@ -50,7 +50,6 @@ axios 返回的是一个promise对象-->
               this.recommendList = data.recommendList;
               this.vacationList = data.vacationList;
             }
-            console.log(res)
         }
       },
       mounted (){
