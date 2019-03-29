@@ -37,7 +37,7 @@ axios 返回的是一个promise对象-->
       },
       methods:{
           getHomeInfo (){
-            axios.get('@/static/mock/index.json')
+            axios.get('/@/static/mock/index.json')
               .then(this.getHomeInfoSucc)
           },
         getHomeInfoSucc (res){
