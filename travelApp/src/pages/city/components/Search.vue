@@ -10,6 +10,7 @@
         <li class="search-item border-bottom"
             v-for="item of list"
             :ket="item.id"
+            @click="handleClityClick(item.name)"
         >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配项</li>
       </ul>
@@ -19,6 +20,7 @@
 
 <script>
   import Bscroll from 'better-scroll'
+  import { mapMutations } from 'vuex'
     export default {
         name: 'CitySearch',
         props: {
@@ -31,6 +33,14 @@
               timer:null
             }
         },
+      methods:{
+        handleClityClick (city) {
+          this.changeCity(city);
+          //使用router里的编程式导航，跳转页面
+          this.$router.push('/');
+        },
+        ...mapMutations(['changeCity'])
+      },
       computed: {
           hasNoData(){
             return !this.list.length

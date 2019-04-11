@@ -1,0 +1,23 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "A site",
+    "bannerImg": "./../../static/img/recommend-5.jpg",
+    "gallaryImgs": ["./../../static/img/recommend-6.jpeg", "./../../static/img/recommend-7.jpeg"],
+    "categoryList": [{
+        "title": "Most Recommend",
+        "children": [{
+          "title": "Details",
+          "children": [{
+            "title": "specification"
+          }]
+        }]
+      }, {
+        "title": "Recommend-1"
+      }, {
+        "title": "Recommend-2"
+      }, {
+        "title": "Recommend-3"
+      }]
+  }
+}

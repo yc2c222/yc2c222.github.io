@@ -6,6 +6,7 @@ import router from './router'
 //移动端设备、浏览器有点击延迟300ms事件，解决方案
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 /*Css文件全局都要使用，现在main.js里引入，再到组件里引用即可
 build webpack.base.conf.js 里为路径添加别名*/
 //Css Reset
@@ -23,6 +24,7 @@ Vue.use(VueAwesomeSwiper);
 new Vue({
   el: '#app',
   router,
+  store:store,
   components: { App },
   template: '<App/>'
 });

@@ -10,7 +10,9 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{city}}
+        <!--main.js里注册了使用了store，所以在这里可以使用this.$store调用index.js-->
+        <!--{{this.$store.state.city}}  通过import和city映射到计算属性city后直接使用this.city-->
+        {{this.city}}
         <span class="iconfont arrow-icon">&#xe62d;</span>
       </div>
     </router-link>
@@ -18,15 +20,14 @@
 </template>
 
 <script>
-
+  import { mapState,mapGetters } from 'vuex'
     export default {
-        name: 'HomeHeader',
-        data() {
-            return {}
-        },
-        props: {
-          city: String
-        }
+      name: 'HomeHeader',
+      computed: {
+        //通过import引入以后，把city这个共用数据映射到一个名为city的计算属性中
+        ...mapState(['city']),
+          ...mapGetters(['doubleCity'])
+      },
     }
 </script>
 
@@ -51,12 +52,13 @@
       line-height: .64rem
       margin-top .12rem
       margin-left : .2rem
+      margin-right : .15rem
       padding-left .2rem
       background :#ffffff
       border-radius .15rem
       color :#cccccc
   .header-right
-      width 1.8rem
+      min-width 1.2rem
       float right
       text-align center
       color: white

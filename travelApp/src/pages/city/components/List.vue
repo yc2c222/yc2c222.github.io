@@ -8,14 +8,18 @@ Alphabet组件先通过$emit的方式触发一个事件，父组件city通过监
         <div class="title border-topbottom">Current City</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">成都</div>
+            <div class="button">{{this.currentCity}}</div>
           </div>
         </div>
       </div>
       <div class="area">
         <div class="title border-topbottom">Hot City</div>
         <div class="button-list">
-          <div class="button-wrapper" v-for="item in hotCities" :key="item.id">
+          <div class="button-wrapper"
+               v-for="item in hotCities"
+               :key="item.id"
+               @click="handleClityClick(item.name)"
+          >
             <div class="button">{{item.name}}</div>
           </div>
         </div>
@@ -24,7 +28,11 @@ Alphabet组件先通过$emit的方式触发一个事件，父组件city通过监
       <div class="area" v-for="(item,key) in cities" :key="key" :ref="key">
       <div class="title border-topbottom">{{key}}</div>
       <div class="item-list">
-        <div class="item border-bottom" v-for="innerItem in item" :key="innerItem.id">{{innerItem.name}}</div>
+        <div class="item border-bottom"
+             v-for="innerItem in item"
+             :key="innerItem.id"
+             @click="handleClityClick(innerItem.name)"
+        >{{innerItem.name}}</div>
       </div>
       </div>
     </div>
@@ -33,13 +41,30 @@ Alphabet组件先通过$emit的方式触发一个事件，父组件city通过监
 
 <script>
   import Bscroll from 'better-scroll'
+  import { mapState, mapMutations } from 'vuex'
     export default {
-        name: 'CityList',
+      name: 'CityList',
+      computed: {
+          //通过import引入以后，通过展开运算符把city这个共用数据映射到一个名为city的计算属性中 (mapState里除了数组也可以是一个对象)
+        ...mapState({
+          currentCity: 'city'
+        })
+      },
         props: {
           hotCities:Array,
           cities:Object,
           letter:String
         },
+      methods:{
+        handleClityClick (city) {
+          /**组件通过dispatch调用index.js里的action，action便可接收到来自组件的参数city，action进一步通过commit调用mutations，mutations便可以改变state里的数据（state里的数据是公用的，如home-header里使用了），由于此处不涉及大批量数据处理，也不涉及异步操作，组件可跳过action，直接通过commit调用mutations**/
+          // this.$store.dispatch('changeCity',city);
+          // this.$store.commit('changeCity',city);
+          this.changeCity(city);
+          this.$router.push('/');
+        },
+        ...mapMutations(['changeCity'])
+      },
         mounted() {
           this.scroll = new Bscroll(this.$refs.wrapper)
         },

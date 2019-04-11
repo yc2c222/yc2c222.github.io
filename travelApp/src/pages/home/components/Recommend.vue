@@ -4,14 +4,20 @@
     <div class="title">Recommend</div>
     <ul>
       <!--border-bottom设置了1像素边框 styles-》border.css-->
-      <li class="item border-bottom" v-for="item in list" :key="item.id">
+      <router-link
+        tag="li"
+        class="item border-bottom"
+        v-for="item in list"
+        :key="item.id"
+        :to="'/detail/' + item.id"
+      >
         <img :src="item.imgUrl" alt="item.id" class="item-img">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">Details</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

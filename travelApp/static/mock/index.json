@@ -1,7 +1,6 @@
 {
   "ret": true,
   "data": {
-    "city": "ChenDu",
     "swiperList": [
       {"id":"001","imgUrl":"@/../static/img/5.jpg"},
       {"id":"002","imgUrl":"@/../static/img/11.jpg"},
