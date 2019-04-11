@@ -34,7 +34,7 @@
       },
       methods: {
           getDetailInfo () {
-            axios.get('static/mock/detail.json',{params:{id:this.$route.params.id}})
+            axios.get('https://wd6958106356rrhdpa.wilddogio.com/detail.json',{params:{id:this.$route.params.id}})
               .then(this.handleGetDataSucc)
           },
           handleGetDataSucc (res) {

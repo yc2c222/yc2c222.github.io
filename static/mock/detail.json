@@ -1,5 +1,6 @@
 {
-  "ret": true,
+  "detail":{
+    "ret": true,
   "data": {
     "sightName": "A site",
     "bannerImg": "./../../static/img/recommend-5.jpg",
@@ -19,5 +20,7 @@
       }, {
         "title": "Recommend-3"
       }]
+    }
   }
+  
 }
